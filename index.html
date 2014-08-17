@@ -1,52 +1,373 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <title>D.Collien by dcollien</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>David Collien's GitHub (dcollien)</title>
+    <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="media/badge/src/badgeMaker.css">
+    <link rel="stylesheet" type="text/css" href="media/badge/src/badgeEditor.css">
+    <link rel="stylesheet" type="text/css" href="media/badge/lib/ui-lightness/jquery-ui-1.10.3.custom.min.css">
+
+    <style type="text/css">
+      body {
+        background-color: #f4f4f4;
+        font-size: 16px;
+      }
+
+      textarea {
+        font-size: 14px;
+      }
+
+      /* columns of same height styles */
+      .container-xs-height {
+        display:table;
+        padding-left:0px;
+        padding-right:0px;
+      }
+      .row-xs-height {
+        display:table-row;
+      }
+      .col-xs-height {
+        display:table-cell;
+        float:none;
+      }
+      @media (min-width: 768px) {
+        .container-sm-height {
+          display:table;
+          padding-left:0px;
+          padding-right:0px;
+        }
+        .row-sm-height {
+          display:table-row;
+        }
+        .col-sm-height {
+          display:table-cell;
+          float:none;
+        }
+      }
+      @media (min-width: 992px) {
+        .container-md-height {
+          display:table;
+          padding-left:0px;
+          padding-right:0px;
+        }
+        .row-md-height {
+          display:table-row;
+        }
+        .col-md-height {
+          display:table-cell;
+          float:none;
+        }
+      }
+      @media (min-width: 1200px) {
+        .container-lg-height {
+          display:table;
+          padding-left:0px;
+          padding-right:0px;
+        }
+        .row-lg-height {
+          display:table-row;
+        }
+        .col-lg-height {
+          display:table-cell;
+          float:none;
+        }
+      }
+
+      .repository {
+        padding: 40px;
+      }
+
+      .box {
+      }
+
+      .repoTitle {
+        font-size: 32px;
+        margin-right: 12px;
+      }
+
+      header {
+        display: block;
+      }
+
+      #view-on-github {
+        margin-top: 18px;
+        float: right;
+      }
+
+      header h2, header h1 {
+        display: inline-block;
+      }
+
+      header h2 {
+        margin-left: 32px;
+        font-size: 20px;
+      }
+    </style>
   </head>
 
   <body>
-    <div id="container">
-      <div class="inner">
+    <div class="container">
+      <header>
+        <a href="https://github.com/dcollien" id="view-on-github" class="btn btn-primary"><span class="fa fa-github-alt"></span> View on GitHub</a>
+        <h1><a href="https://github.com/dcollien"><span class="fa fa-github"></span> dcollien</a></h1>
+        <h2>David Collien's Github Repositories</h2>
+      </header>
 
-        <header>
-          <h1>D.Collien</h1>
-          <h2></h2>
-        </header>
+      <div class="rows container-md-height">
+        <div class="row row-md-height">
+          <section class="repository col-md-6 col-md-height">
+            <div class="box">
+              <a class="repoTitle" href="http://dcollien.github.io/FilterHTML"><span class="fa fa-code"></span> FilterHTML</a> 
+              <span class="language label label-primary">JavaScript</span> <span class="language label label-warning">Python</span>
+              
+              <p>A white-listing HTML Filter with an easy-to-define white list. Both <b>Python</b> and <b>JavaScript</b> versions. Supports style and class parsing, unicode removal, script tag removal, filtering by HTML colors, measurements, url matching, RegExp matching, with tag conversion, text node filtering, and more.</p>
+              <div class="demo">
+                <div class="row-fluid">
+                  <div class="col-sm-6">Allowed HTML Specification</div>
+                  <div class="col-sm-6">HTML</div>
+                </div>
+                <div class="row-fluid">
+                  <textarea id="filterSpec" class="col-sm-6" style="box-sizing: border-box; height: 240px; margin: 0; border: 1px solid #eee;"></textarea>
+                  <textarea id="filteredHTML" class="col-sm-6" style="box-sizing: border-box; height: 240px; margin: 0; border: 1px solid #eee;"></textarea>
+                </div>
+                <button type="button" class="btn btn-default pull-right" id="filterBtn" style="margin-top: 8px;">Filter HTML</button>
+              </div>
 
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/dcollien" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
+              <div class="clearfix"></div>
+            </div>
+          </section>
 
-        <hr>
+          <section class="repository col-md-6 col-md-height">
+            <div class="box">
+              <a class="repoTitle" href="http://dcollien.github.io/Dreamcoat"><span class="fa fa-tint"></span> Dreamcoat</a>
+              <span class="language label label-info">CoffeeScript</span>
+              <p>Automatically determine a color scheme based off a logo image. Demonstrates color octree quantization and KMeans clustering in literate coffeescript. Added tools for background color, and contrasting text color guessing.</p>
+              <div class="preview">
+                <a href="http://dcollien.github.io/Dreamcoat"><img src="media/DCpreview.png" class="img-responsive"></a>
+              </div>
+            </div>
+          </section>
+        </div>
 
-        <section id="main_content">
-          <h1>D.Collien's Github</h1>
-          
-          <ul style="font-size: 22px">
-            <li><a href="http://dcollien.github.com/FilterHTML">FilterHTML</a> - A white-listing HTML Filter with an easy-to-define white list. Both <b>Python</b> and <b>JavaScript</b> versions.</li>
-            <li><a href="http://dcollien.github.com/Capturevate">Capturevate</a> - A simple, fast and scalable per-user website action logger. Includes a jQuery plugin for the client-side and a fast asynchronous logging server in C. Data from requests is buffered in Redis and can be persisted to disk. A store-to-MongoDB service is included. </li>
-            <li><a href="http://dcollien.github.com/BlogAbout">BlogAbout</a> - A mockup of a WYSIWYG blogging tool that can be accessed from a tab at the bottom of the page, so the user can quick-blog about the current page being viewed.</li>
-            <li><a href="http://dcollien.github.com/Teapot">Teapot Server</a> - An HTTP server to run on HTTP-enabled teapots to help differentiate them from HTCPCP devices on the same network.</li>
-            <li><a href="http://dcollien.github.com/Chatitat">Chatitat</a> - A drop-in jQuery plugin and node.js service for adding real-time chat features to a website. Uses Redis Pub/Sub and features a REST API for archiving message history.</li>
-            <li><a href="http://dcollien.github.com/AutoScheme">AutoScheme</a> - Automatically determine a color scheme based off a logo image. Demonstrates color octree quantization and KMeans clustering in literate coffeescript.</li>
-          </ul>
-        </section>
+        <div class="row row-md-height">
+          <section class="repository col-md-6 col-md-height">
+            <div class="box">
+              <a class="repoTitle" href="https://github.com/dcollien/BadgeMaker"><span class="fa fa-shield"></span> Badge Maker</a>
+              <span class="language label label-primary">JavaScript</span>
+              <p>Build snazzy badges on an HTML5 Canvas</p>
+              <div class="demo clearfix">
+                <div id="badge"></div>
+              </div>
+            </div>
+          </section>
 
-        <footer>
-          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
+          <section class="repository col-md-6 col-md-height">
+            <div class="box">
+              <a class="repoTitle" href="https://github.com/dcollien/ExpressionParser"><span class="fa fa-asterisk"></span> Expression Parser</a>
+              <span class="language label label-primary">JavaScript</span> 
+              <p>Parse simple expressions, in a language of your own description. Evaluates expressions, or lists of expression tokens. Converts expressions into Reverse Polish Notation and back. Lets you use your own tokeniser or the simple built-in one.</p>
+              <div class="demo">
+                <form class="form-inline" role="form">
+                  <input type="text" id="expressionInpt" class="form-control" size="48" placeholder="Expression (e.g. 1 + 1)" value="1 + 1 * 2 - (10 / 2) + SQRT 16"> <button type="button" id="evaluateBtn" class="btn btn-default">Evaluate</button>
+                </form>
+                <br>
+                Language Definition:
+                <pre style="height: 240px; overflow: scroll;" id="langDefn">
+{
+  // Parsing
+  INFIX_OPS: {
+    '+': function(a, b) {
+      return a + b;
+    },
+    '-': function(a, b) {
+      return a - b;
+    },
+    '*': function(a, b) {
+      return a * b;
+    },
+    '/': function(a, b) {
+      return a / b;
+    }
+  },
+  PREFIX_OPS: {
+    'SQRT': function(expr) {
+      return Math.sqrt(expr);
+    }
+  },
+  PRECEDENCE: [['SQRT'], ['*', '/'], ['+', '-']],
+  GROUP_OPEN: '(',
+  GROUP_CLOSE: ')',
 
-        
+  // Tokenising
+  SEPARATOR: ' ',
+  SYMBOLS: ['(', ')', '+', '-', '*', '/'],
+
+  // Evaluating Terminals
+  termDelegate: function(term) {
+    return parseInt(term);
+  }
+}
+                </pre>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="row row-md-height">
+          <section class="repository col-md-6 col-md-height">
+            <div class="box">
+              <a class="repoTitle" href="http://dcollien.github.io/Teapot"><span class="fa fa-coffee"></span> Teapot Server</a>
+              <span class="language label label-default">C</span>
+              <p>An HTTP server to run on HTTP-enabled teapots to help differentiate them from HTCPCP devices on the same network.</p>
+              <div class="preview">
+                <a href="http://dcollien.github.io/Teapot"><img src="http://dcollien.github.io/Teapot/serving_suggestion.jpg" class="img-responsive"></a>
+              </div>
+            </div>
+          </section>
+
+          <section class="repository col-md-6 col-md-height">
+            <div class="box">
+              <a class="repoTitle" href="https://github.com/dcollien/jQuery.makePlugin"><span class="fa fa-puzzle-piece"></span> jQuery.makePlugin</a>
+              <span class="language label label-primary">JavaScript</span><p>An easy way to make jQuery Plugins.</p>
+              <div class="preview">
+                Turns this:
+  <pre><code>
+var MyClass = function($container, options) {
+    this.$container = $container;
+    this.options = options;
+};
+
+$.extend(MyClass.prototype, {
+    changeLinkColor: function(color) {
+        this.$container.find('a').css('color', color);
+    }
+});
+  </code></pre>
+              Into this:
+  <pre><code>
+$('#someElementByID').myPlugin({someOption: 42});
+$('#someElementByID').myPlugin('changeLinkColor', 'red');
+  </code></pre>
+              (also allows for a custom jQuery interface to be specified)
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
+
+      <footer>
+        <span class="fa fa-github-square"></span> More at: <a href="https://github.com/dcollien"> dcollien on GitHub</a>
+        <span class="pull-right">David Collien, 2014</span>
+      </footer>
     </div>
+
+    <!-- jquery -->
+    <script src="media/badge/lib/jquery-1.10.2.min.js"></script>
+    <!-- ui-slider -->
+    <script src="media/badge/lib/jquery-ui-1.10.3.custom.min.js"></script>
+    <!-- makePlugin -->
+    <script src="media/badge/lib/jQuery.makePlugin.js"></script>
+
+    <!-- image repository -->
+    <script src="media/badge/badge-images/images/images.js"></script>
+
+    <!-- badge maker core -->
+    <script src="media/badge/src/jQuery.badgeMaker.js"></script>
+    <!-- editor UI -->
+    <script src="media/badge/src/jQuery.badgeEditor.js"></script>
+
+    <!-- FilterHTML -->
+    <script src="media/filter/FilterHTML.js"></script>
+
+    <!-- ExpressionParser -->
+    <script src="media/expression/ExpressionParser.js"></script>
+
+    <script>
+      $('#badge').badgeEditor({
+        badgeImagePath: 'media/badge/badge-images/',
+      });
+
+      $('.badgeEditor.jq-badgemaker').css('height', 'auto');
+
+      var filterSpec = {
+        'a': {
+          'href': 'url',
+          'target': ['_blank', '_self'],
+          'class': ['btn', 'btn-default']
+        },
+        'img': {
+          'src': 'url'
+        },        
+        'span': {
+          'style': {
+            'color': 'color',
+            'background-color': 'color',
+            'font-size': 'measurement'
+          }
+        },
+        'p': {},
+        'br': {},
+        'strong': {},
+        'em': {},
+        'b': 'strong',
+        'i': 'em'
+      };
+
+      $('#filterSpec').text(JSON.stringify(filterSpec, null, ' '));
+      $('#filteredHTML').val('<a href="http://www.google.com" target="_blank">Link To Google</a><br>\n<strong notallowed="removed">Bold Text</strong>\n<b>Converted</b>\n<notallowed></notallowed>');
+
+      $('#filterBtn').on('click', function() {
+        var html = $('#filteredHTML').val();
+        var spec = JSON.parse($('#filterSpec').val());
+        $('#filteredHTML').val(FilterHTML.filter_html(html, spec));
+      });
+
+      var langDefn = {
+        // Parsing
+        INFIX_OPS: {
+          '+': function(a, b) {
+            return a + b;
+          },
+          '-': function(a, b) {
+            return a - b;
+          },
+          '*': function(a, b) {
+            return a * b;
+          },
+          '/': function(a, b) {
+            return a / b;
+          }
+        },
+        PREFIX_OPS: {
+          'SQRT': function(expr) {
+            return Math.sqrt(expr);
+          }
+        },
+        PRECEDENCE: [['SQRT'], ['*', '/'], ['+', '-']],
+        GROUP_OPEN: '(',
+        GROUP_CLOSE: ')',
+
+        // Tokenising
+        SEPARATOR: ' ',
+        SYMBOLS: ['(', ')', '+', '-', '*', '/'],
+
+        // Evaluating Terminals
+        termDelegate: function(term) {
+          return parseInt(term);
+        }
+      };
+
+      $('#evaluateBtn').on('click', function() {
+        var expression = $('#expressionInpt').val();
+        alert(new ExpressionParser(langDefn).evaluateExpression(expression));
+      });
+    </script>
   </body>
 </html>
