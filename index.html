@@ -419,8 +419,14 @@ $('#someElementByID').myPlugin('changeLinkColor', 'red');
       };
 
       $('#evaluateBtn').on('click', function() {
+        var result;
         var expression = $('#expressionInpt').val();
-        alert(new ExpressionParser(langDefn).evaluateExpression(expression));
+        try {
+          result = new ExpressionParser(langDefn).evaluateExpression(expression);
+          alert(result);
+        } catch (err) {
+          alert(err);
+        }
       });
     </script>
   </body>
