@@ -130,12 +130,14 @@
               <p>A white-listing HTML Filter with an easy-to-define white list. Both <b>Python</b> and <b>JavaScript</b> versions. Supports style and class parsing, unicode removal, script tag removal, filtering by HTML colors, measurements, url matching, RegExp matching, with tag conversion, text node filtering, and more.</p>
               <div class="demo">
                 <div class="row-fluid">
-                  <div class="col-sm-6">Allowed HTML Specification</div>
-                  <div class="col-sm-6">HTML</div>
-                </div>
-                <div class="row-fluid">
-                  <textarea id="filterSpec" class="col-sm-6" style="box-sizing: border-box; height: 240px; margin: 0; border: 1px solid #eee;"></textarea>
-                  <textarea id="filteredHTML" class="col-sm-6" style="box-sizing: border-box; height: 240px; margin: 0; border: 1px solid #eee;"></textarea>
+                  <div class="col-sm-6">
+                    Allowed HTML Specification
+                    <textarea id="filterSpec" style="box-sizing: border-box; height: 240px; margin: 0; border: 1px solid #eee; width: 100%;"></textarea>
+                  </div>
+                  <div class="col-sm-6">
+                    HTML
+                    <textarea id="filteredHTML" style="box-sizing: border-box; height: 240px; margin: 0; border: 1px solid #eee; width: 100%;"></textarea>
+                  </div>
                 </div>
                 <button type="button" class="btn btn-default pull-right" id="filterBtn" style="margin-top: 8px;">Filter HTML</button>
               </div>
