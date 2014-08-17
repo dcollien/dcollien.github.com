@@ -376,7 +376,11 @@ $('#someElementByID').myPlugin('changeLinkColor', 'red');
       $('#filterBtn').on('click', function() {
         var html = $('#filteredHTML').val();
         var spec = JSON.parse($('#filterSpec').val());
-        $('#filteredHTML').val(FilterHTML.filter_html(html, spec));
+        try {
+          $('#filteredHTML').val(FilterHTML.filter_html(html, spec));
+        } catch (err) {
+          alert(err.name + '\n' + err.message);
+        }
       });
 
       var langDefn = {
