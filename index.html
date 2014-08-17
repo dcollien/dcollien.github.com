@@ -24,6 +24,10 @@
         font-size: 14px;
       }
 
+      hr {
+        border-color: #aaa;
+      }
+
       /* columns of same height styles */
       .container-xs-height {
         display:table;
@@ -84,7 +88,8 @@
         padding: 40px;
       }
 
-      .box {
+      .gists {
+        padding: 40px;
       }
 
       .repoTitle {
@@ -118,6 +123,15 @@
         <a href="https://github.com/dcollien" id="view-on-github" class="btn btn-primary"><span class="fa fa-github-alt"></span> View on GitHub</a>
         <h1><a href="https://github.com/dcollien"><span class="fa fa-github"></span> dcollien</a></h1>
         <h2>David Collien's GitHub Repositories</h2>
+        <div>
+          <span class="language label label-primary">JavaScript</span>
+          <span class="language label label-info">CoffeeScript</span>
+          <span class="language label label-warning">Python</span>
+          <span class="language label label-default">C</span>
+          <span class="language label label-success">Haskell</span>
+          <span class="language label label-danger">Java</span>
+        </div> 
+        <hr>
       </header>
 
       <div class="rows container-md-height">
@@ -283,6 +297,19 @@ $('#someElementByID').myPlugin('changeLinkColor', 'red');
             </div>
           </section>
         </div>
+      </div>
+
+      <div>
+        <hr>
+        <section class="gists">
+          <div class="box">
+            <h3><span class="fa fa-file-o"></span> Gists</h3>
+            <ul class="list-group">
+              <li class="list-group-item"><a href="https://gist.github.com/dcollien/2364685">Speedy Mandelbrot Set Rendering</a> <span class="language label label-success pull-right">Haskell</span></li>
+              <li class="list-group-item"><a href="https://gist.github.com/dcollien/7523295">A Tiny 2D Vector Library</a> <span class="language label label-primary pull-right">JavaScript</span></li>
+            </ul>
+          </div>
+        </section>
       </div>
 
       <footer>
